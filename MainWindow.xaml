@@ -1,0 +1,24 @@
+﻿<Window x:Class="WpfAppMusic.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppMusic"
+        mc:Ignorable="d"
+        Title="Music Library" Height="450" Width="800">
+    <Grid>
+        <ListBox x:Name="artistsListBox" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,10,10" SelectionChanged="ArtistsListBox_SelectionChanged">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding}" FontSize="16" Foreground="Blue" FontWeight="Bold"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <ListBox x:Name="albumsListBox" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="150,10,10,10">
+        </ListBox>
+        <StackPanel Name="artistPanel" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0">
+        </StackPanel>
+        <ListBox x:Name="tracksListBox" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="300,10,10,10">
+        </ListBox>
+    </Grid>
+   </Window>
